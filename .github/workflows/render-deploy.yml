@@ -20,6 +20,7 @@ jobs:
         with:
           tags: antoniofmoraes/roster-app:latest,antoniofmoraes/roster-app:${{ github.sha }}
   publish:
+    needs: docker_image
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to production
